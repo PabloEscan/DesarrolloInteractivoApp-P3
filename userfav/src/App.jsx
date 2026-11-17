@@ -15,6 +15,8 @@ function App() {
 
   const handleFavoritoClick = (idUsuario) => {
     const usuarioActual = usuarios.find(u => u.id === idUsuario);
+    if (!usuarioActual) return;
+    
     const eraFavorito = usuarioActual?.favorito;
 
     setContadorGlobal(prev => eraFavorito ? Math.max(0, prev - 1) : prev + 1);
