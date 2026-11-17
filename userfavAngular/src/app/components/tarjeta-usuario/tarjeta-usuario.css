@@ -1,0 +1,15 @@
+.tarjeta-usuario{
+    position: relative;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 7px;
+    background-color: #ffffff;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.usuario{
+    font-size: 0.9rem;
+    margin-top: -9px;
+    color : #666;
+}

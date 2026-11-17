@@ -1,0 +1,18 @@
+<div class="tarjeta-usuario">
+  <h3 class="usuarios-nombre">{{ nombre() }}</h3>
+  <p class="usuario">@{{ usuario() }}</p>
+  <p><strong>Email:</strong> {{email()}}</p>
+  <p><strong>Empresa:</strong> {{empresa()}}</p>
+  <p><strong>Ciudad:</strong> {{ciudad()}}</p>
+
+  <button (click)="toogleDetalles()">Desplegar</button>
+
+  <div calssName = "direccion-desplegable">
+    <h2>
+      @if (mostratDetalle)
+      {
+        <p><strong>Calle:</strong> {{calle()}}</p>
+        <p><strong>Apartamento/Suite:</strong> {{apartamento()}}</p>
+      }
+    </h2>
+</div>
