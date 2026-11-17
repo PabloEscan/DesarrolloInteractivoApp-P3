@@ -5,6 +5,13 @@
     padding: 7px;
     background-color: #ffffff;
     color: #666;
+    margin-bottom: 5px;
+}
+
+.btn-favorito.activo {
+  background-color: #fef08a;
+  border-color: #fde047;
+  color: #713f12;
 }
 
 .btn-favorito {

@@ -161,6 +161,15 @@
   }
 }
 
+.busqueda-usuario {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  color: #666;
+  border-radius: 6px;
+}
+
 .ticks {
   position: relative;
   width: 100%;
