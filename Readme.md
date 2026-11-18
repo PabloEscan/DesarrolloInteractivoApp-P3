@@ -6,7 +6,7 @@
 
 Foto evidencia de la aplicación en vivo:
 
-![Evidencia Funcionamiento](./capturas/Pagina-React.png)
+![Evidencia Funcionamiento](capturas/Pagina-React.png)
 
 Comandos para la ejecución del proyecto:
 
@@ -20,7 +20,7 @@ npm run dev
 
 Foto evidencia de la aplicación en vivo:
 
-![Evidencia Funcionamiento](./capturas/Pagina-Angular.png)
+![Evidencia Funcionamiento](capturas/Pagina-Angular.png)
 
 Comandos para la ejecución del proyecto:
 
