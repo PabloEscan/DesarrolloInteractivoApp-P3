@@ -1,4 +1,11 @@
 <div class="tarjeta-usuario">
+  <button 
+    class="btn-favorito"
+    [class.activo]="esFavorito()"
+    (click)="toggleFavorito()"> 
+    {{ esFavorito() ? '★ Favorito' : '☆ Marcar Favorito' }}
+  </button>
+
   <h3 class="usuarios-nombre">{{ nombre() }}</h3>
   <p class="usuario">@{{ usuario() }}</p>
   <p><strong>Email:</strong> {{email()}}</p>
@@ -7,12 +14,11 @@
 
   <button (click)="toogleDetalles()">Desplegar</button>
 
-  <div calssName = "direccion-desplegable">
-    <h2>
-      @if (mostratDetalle)
+  <div class="direccion-desplegable">
+      @if (mostrarDetalles())
       {
         <p><strong>Calle:</strong> {{calle()}}</p>
         <p><strong>Apartamento/Suite:</strong> {{apartamento()}}</p>
       }
-    </h2>
+  </div>
 </div>

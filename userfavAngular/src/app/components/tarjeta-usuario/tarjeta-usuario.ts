@@ -1,4 +1,4 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, input, signal, output } from '@angular/core';
 
 @Component({
   selector: 'app-tarjeta-usuario',
@@ -8,18 +8,26 @@ import { Component, input, signal } from '@angular/core';
 })
 
 export class TarjetaUsuario {
+  id = input.required<number>();
   nombre = input.required<string>();
   usuario = input.required<string>();
   email = input.required<string>();
   empresa = input.required<string>();
   ciudad = input.required<string>();
-
   calle = input.required<string>();
   apartamento = input.required<string>();
 
   mostrarDetalles = signal<boolean>(false);
+  esFavorito = signal<boolean>(false);
+
+  favoritoChange = output<boolean>();
 
   toogleDetalles() : void {
     this.mostrarDetalles.update(valorActual => !valorActual);
+  }
+
+  toggleFavorito(): void {
+    this.esFavorito.update(val => !val);
+    this.favoritoChange.emit(this.esFavorito());
   }
 }

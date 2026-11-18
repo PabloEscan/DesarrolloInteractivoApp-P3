@@ -13,3 +13,10 @@
     margin-top: -9px;
     color : #666;
 }
+
+.btn-favorito{
+    position: absolute;
+    top: 15px;  
+    right: 15px;  
+    cursor: pointer;
+}

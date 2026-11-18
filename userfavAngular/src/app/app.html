@@ -1,21 +1,35 @@
 <main>
+  <h1>Tarjeta de Usuarios</h1>
 
-  
-  <h1>Lista de Usuarios</h1>
+  <div class="header-favoritos">
+    <p>Total de favoritos globales: <strong>{{ totalFavoritos() }}</strong></p>
+  </div>
 
+  <input
+    className='busqueda-usuario'
+    type= "text"
+    placeholder='Buscar por nombre...'
+    [formControl] = "busqueda"
+  />
 
-  @for (item of usuarios(); track item.id) {
-    <app-tarjeta-usuario 
-      [nombre]="item.name" 
-      [usuario]="item.username" 
-      [email]="item.email"
-      [empresa] = "item.company.name"
-      [ciudad] = "item.address.city"
-
-      [calle] = "item.address.street"
-      [apartamento] = "item.address.suite"
-    />
-  } @empty {
-    <p>Cargando usuarios...</p>
+  @if (cargando()) {
+    <p>cargando usuarios.. </p>
+  } @else {
+      @for (item of datosfiltrados(); track item.id) {
+      <app-tarjeta-usuario 
+        [id] = "item.id"
+        [nombre]="item.name" 
+        [usuario]="item.username" 
+        [email]="item.email"
+        [empresa] = "item.company.name"
+        [ciudad] = "item.address.city"
+        [calle] = "item.address.street"
+        [apartamento] = "item.address.suite"
+        (favoritoChange)="handleFavoritoClick(item.id, $event)"
+      />
+    } @empty {
+      <p>Cargando usuarios...</p>
+    }
   }
+  
 </main>
